@@ -14,7 +14,7 @@ Using the `RiskParityPortfolio` class, the system constructs a portfolio where r
 * **Numerical Optimization:** Uses `scipy.optimize` to find weights that minimize the difference between risk contributions.
 * **Dynamic Selection:** Automatically identifies the asset with the **highest allocation** (the "safest" or least volatile asset in the risk parity context) to proceed to the options analysis.
 
-* ![Portfolio Allocation](visualizations/Risk_Parity_Portfolio_Example.png)
+![Portfolio Allocation](visualizations/Risk_Parity_Portfolio_Example.png)
 *Figure 1: Risk Parity weight distribution across the selected assets (for instance: BTC-USD, TSM and SLV).*
 
 ### Phase 2: Advanced Options Analysis (Black-Scholes)
