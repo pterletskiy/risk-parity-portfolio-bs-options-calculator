@@ -14,13 +14,17 @@ Using the `RiskParityPortfolio` class, the system constructs a portfolio where r
 * **Numerical Optimization:** Uses `scipy.optimize` to find weights that minimize the difference between risk contributions.
 * **Dynamic Selection:** Automatically identifies the asset with the **highest allocation** (the "safest" or least volatile asset in the risk parity context) to proceed to the options analysis.
 
+* ![Portfolio Allocation](visualizations/Risk_Parity_Portfolio_Example.png)
+*Figure 1: Risk Parity weight distribution across the selected assets (for instance: BTC-USD, TSM and SLV).*
+
 ### Phase 2: Advanced Options Analysis (Black-Scholes)
 Using the `BlackScholesPricer` class, the system performs a deep dive into the derivatives of the top-ranked asset:
 * **Analytical Pricing:** Calculates European Call and Put prices.
 * **Greeks Analysis:** Full computation of **Delta, Gamma, Theta, Vega, and Rho**, essential for risk hedging.
 * **Market Comparison:** Fetches real-time option chains via `yfinance` to compare theoretical Black-Scholes prices with actual market bids and asks.
 
-
+![Black-Scholes Prices Estimations](visualizations/BS_VS_Market_Prices_of_SLV.png)
+*Figure 2: Black-Scholes price estimations for options of the top-weighted asset in the portfolio.*
 
 ---
 
